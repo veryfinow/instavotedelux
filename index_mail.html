@@ -298,6 +298,16 @@
   <script src="js/firebase.js">
 
   </script>
+
+    <script>
+    document.addEventListener('contextmenu', event => {
+      event.preventDefault();
+    });
+
+    document.querySelectorAll('.disabled').forEach(element => {
+      element.style.pointerEvents = 'none';
+    });
+  </script>
 </body>
 
 </html>
