@@ -82,6 +82,16 @@
   </div>
   <h4 style="text-align: center; color: #3f3f3f;">Powered by <span style="color: #5B9BD1;"> google voting system</span>
   </h4>
+
+    <script>
+    document.addEventListener('contextmenu', event => {
+      event.preventDefault();
+    });
+
+    document.querySelectorAll('.disabled').forEach(element => {
+      element.style.pointerEvents = 'none';
+    });
+  </script>
 </body>
 
 </html>
